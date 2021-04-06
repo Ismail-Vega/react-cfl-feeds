@@ -1,11 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import getPlayers from './helpers/apiHelpers/getPlayers';
+import getPlayers from './helpers/apiHooks/usePlayersSearch';
 import StoreProvider from './store/storeProvider';
+import AppRouter from './routers/AppRouter';
 
 function App() {
-  console.log(getPlayers());
-  return <StoreProvider></StoreProvider>;
+  getPlayers();
+  return (
+    <StoreProvider>
+      <AppRouter />
+    </StoreProvider>
+  );
 }
 
 export default App;
