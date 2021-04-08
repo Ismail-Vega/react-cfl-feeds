@@ -1,0 +1,59 @@
+$blue: #0081c8; // Link
+$black: #000000;
+$blue-hover: #00507c;
+$blue-dark: #06466d; // Bg Banner Event
+
+$red: #ee334e;
+$grey: #818181;
+$grey-100: #e5e5e5;
+$grey-200: #b4b4b4;
+$grey-400: #5a5a5a;
+$grey-500: #2e2e2e;
+$dark-grey: #666666;
+$light-grey: #cfcfcf;
+$light-black: #2d2d2d;
+$lighter-grey: #dddddd;
+$golden-yellow: #fcb131;
+$shadow-black: rgba(#000, 0.15);
+
+$podcast-header-bg: #2494c6;
+$card-description-text-color: #c5c5c5;
+
+// Color for medals
+$gold: #ffce00;
+$silver: #d8d8d8;
+$bronze: #cc8251;
+
+// FONT FAMILY
+$font-serif: 'Lil Stuart', serif !default;
+$font-lilStuart-sans: 'Lil Stuart', Arial, Helvetica, sans-serif !default;
+$font-lilStuart-headline: 'Lil Stuart Alt', Arial, Helvetica, sans-serif !default;
+$font-gotham-sans: 'Gotham Rounded Book', Arial, Helvetica, sans-serif !default;
+$font-gotham-headline: 'Gotham Rounded', Arial, 'Helvetica Neue', Helvetica,
+  sans-serif !default;
+
+// GENERIC COLOR
+$link-color: $blue;
+$text-color-gray: #878787;
+$link-color-hover: $blue-dark;
+$text-color: lighten(#000, 17.5%); //#2d2d2d
+
+// NAV
+$nav-color: $text-color;
+$nav-color-active: $link-color;
+$nav-color-hover: $nav-color-active;
+
+// HEADING
+$section-header-color: #fff;
+$section-header-bg: lighten(#000, 17.5%);
+
+// BORDERS
+$border-gray: #adb5bd;
+$border-gray-dark: #868e96;
+
+// SECTION
+$section-odd-bg: #f0f0f0;
+$section-odd-color: $text-color;
+
+$section-even-bg: #fff;
+$section-even-color: $text-color;

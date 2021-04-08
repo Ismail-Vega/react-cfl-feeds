@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: local('Gotham Rounded Bold Italic'), local('GothamRounded-BoldItalic'),
+    url('../../fonts/GothamRounded-BoldItalic.woff2') format('woff2'),
+    url('../../fonts/GothamRounded-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: local('Gotham Rounded Bold'), local('GothamRounded-Bold'),
+    url('../../fonts/GothamRounded-Bold.woff2') format('woff2'),
+    url('../../fonts/GothamRounded-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded Book';
+  src: local('Gotham Rounded Book'), local('GothamRounded-Book'),
+    url('../../fonts/GothamRounded-Book.woff2') format('woff2'),
+    url('../../fonts/GothamRounded-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: local('Gotham Rounded Medium'), local('GothamRounded-Medium'),
+    url('../../fonts/GothamRounded-Medium.woff2') format('woff2'),
+    url('../../fonts/GothamRounded-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: local('Gotham Rounded Light'), local('GothamRounded-Light'),
+    url('../../fonts/GothamRounded-Light.woff2') format('woff2'),
+    url('../../fonts/GothamRounded-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: local('Gotham Rounded Medium Italic'),
+    local('GothamRounded-MediumItalic'),
+    url('../../fonts/GothamRounded-MediumItalic.woff2') format('woff2'),
+    url('../../fonts/GothamRounded-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: local('Gotham Rounded Light Italic'), local('GothamRounded-LightItalic'),
+    url('../../fonts/GothamRounded-LightItalic.woff2') format('woff2'),
+    url('../../fonts/GothamRounded-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded Book';
+  src: local('Gotham Rounded Book Italic'), local('GothamRounded-BookItalic'),
+    url('../../fonts/GothamRounded-BookItalic.woff2') format('woff2'),
+    url('../../fonts/GothamRounded-BookItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lil Stuart Alt';
+  src: local('Lil Stuart Alt Regular'), local('LilStuartAlt-Regular'),
+    url('../../fonts/LilStuartAlt-Regular.woff2') format('woff2'),
+    url('../../fonts/LilStuartAlt-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lil Stuart';
+  src: local('Lil Stuart Regular'), local('LilStuart-Regular'),
+    url('../../fonts/LilStuart-Regular.woff2') format('woff2'),
+    url('../../fonts/LilStuart-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
