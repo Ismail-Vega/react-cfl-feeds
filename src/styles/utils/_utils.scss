@@ -1,0 +1,36 @@
+// LAYOUT
+.block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// VISIBILITY
+.d-none {
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+// POSITION
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}

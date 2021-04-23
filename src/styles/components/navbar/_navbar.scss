@@ -1,0 +1,28 @@
+nav {
+  color: $nav-color;
+  background-color: $nav-bg-color;
+
+  .nav-wrapper {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  &.nav-extended {
+    .nav-wrapper {
+    }
+
+    .nav-content {
+      position: relative;
+    }
+  }
+
+  .nav-list {
+    width: 100%;
+    justify-content: space-between;
+
+    .nav-item {
+      padding: rem(12);
+      text-transform: uppercase;
+    }
+  }
+}

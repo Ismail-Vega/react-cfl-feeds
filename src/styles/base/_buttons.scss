@@ -1,0 +1,32 @@
+button {
+  cursor: pointer;
+}
+
+.button-no-styles {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.cfl-button-primary {
+  border: none;
+  color: $black;
+  overflow: hidden;
+  padding: 0 rem(1);
+  text-align: center;
+  border-radius: 4px;
+  white-space: nowrap;
+  mix-blend-mode: normal;
+  text-overflow: ellipsis;
+  background-color: $white;
+  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.08);
+}
+
+.load-more-btn {
+  width: 50px;
+  height: 50px;
+  outline: none;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: $black;
+}

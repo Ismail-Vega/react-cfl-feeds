@@ -1,7 +1,8 @@
-$blue: #0081c8; // Link
+$blue: #0081c8;
+$white: #ffffff;
 $black: #000000;
 $blue-hover: #00507c;
-$blue-dark: #06466d; // Bg Banner Event
+$blue-dark: #06466d;
 
 $red: #ee334e;
 $grey: #818181;
@@ -12,7 +13,7 @@ $grey-500: #2e2e2e;
 $dark-grey: #666666;
 $light-grey: #cfcfcf;
 $light-black: #2d2d2d;
-$lighter-grey: #dddddd;
+$lighter-grey: #dddddd; //used
 $golden-yellow: #fcb131;
 $shadow-black: rgba(#000, 0.15);
 
@@ -25,12 +26,11 @@ $silver: #d8d8d8;
 $bronze: #cc8251;
 
 // FONT FAMILY
-$font-serif: 'Lil Stuart', serif !default;
+$font-serif: 'serif' !default;
 $font-lilStuart-sans: 'Lil Stuart', Arial, Helvetica, sans-serif !default;
 $font-lilStuart-headline: 'Lil Stuart Alt', Arial, Helvetica, sans-serif !default;
-$font-gotham-sans: 'Gotham Rounded Book', Arial, Helvetica, sans-serif !default;
-$font-gotham-headline: 'Gotham Rounded', Arial, 'Helvetica Neue', Helvetica,
-  sans-serif !default;
+$font-sans: 'Source Sans Pro', Arial, Helvetica, sans-serif !default;
+$font-headline: 'Arial', 'Helvetica Neue', Helvetica, sans-serif !default;
 
 // GENERIC COLOR
 $link-color: $blue;
@@ -38,14 +38,14 @@ $text-color-gray: #878787;
 $link-color-hover: $blue-dark;
 $text-color: lighten(#000, 17.5%); //#2d2d2d
 
-// NAV
-$nav-color: $text-color;
-$nav-color-active: $link-color;
-$nav-color-hover: $nav-color-active;
+// LAYOUT
+$html-font-size: 16px; //used
+$cfl-main-x-padding: 12px;
 
-// HEADING
-$section-header-color: #fff;
-$section-header-bg: lighten(#000, 17.5%);
+// NAV
+$nav-color: $lighter-grey; // used
+$nav-item-color: $lighter-grey;
+$nav-bg-color: lighten(#000, 17.5%); //used
 
 // BORDERS
 $border-gray: #adb5bd;
