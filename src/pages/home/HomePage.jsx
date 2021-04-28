@@ -6,7 +6,7 @@ export default function HomePage() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    return () => {};
+    console.log('Hello home');
   }, []);
 
   return <div>Hello Home</div>;

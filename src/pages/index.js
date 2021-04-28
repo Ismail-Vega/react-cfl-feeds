@@ -1,4 +1,9 @@
-export { default as AboutPage } from './about/AboutPage';
-export { default as ContactPage } from './contact/ContactPage';
-export { default as NotFoundPage } from './404/NotFoundPage';
 export { default as HomePage } from './home/HomePage';
+export { default as AboutPage } from './about/AboutPage';
+export { default as GamesPage } from './games/GamesPage';
+export { default as TeamsPage } from './teams/TeamsPage';
+export { default as NotFoundPage } from './404/NotFoundPage';
+export { default as PlayersPage } from './players/PlayersPage';
+export { default as SeasonsPage } from './seasons/SeasonsPage';
+export { default as ContactPage } from './contact/ContactPage';
+export { default as StandingsPage } from './standings/StandingsPage';

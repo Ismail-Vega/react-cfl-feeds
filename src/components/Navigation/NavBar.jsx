@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import Logo from '../../images/logos/logo_white.svg';
 
 const ITEMS = [
@@ -9,20 +9,30 @@ const ITEMS = [
   { id: 4, path: '/teams', value: 'Teams' },
   { id: 5, path: '/seasons', value: 'Seasons' },
 ];
+const CFL_NAV = JSON.parse(localStorage.getItem('cfl-nav'));
 
-// handle active item with location path value instead to get the correct value after reload
 function NavBar() {
-  const [activeItem, setActiveItem] = useState(null);
-  const [activeMenu, setActiveMenu] = useState(false);
+  const location = useLocation();
+  const [activeItem, setActiveItem] = useState(location.pathname || null);
+  const [activeMenu, setActiveMenu] = useState(CFL_NAV.activeMenu || false);
 
-  const handleItemClick = (id) => {
+  const handleItemClick = (path) => {
     if (activeMenu) {
       setActiveMenu(false);
     }
 
-    setActiveItem(id);
+    setActiveItem(path);
     return;
   };
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('cfl-nav', JSON.stringify({ activeMenu }));
+    } catch (error) {
+      console.log('error: ', error);
+      localStorage.removeItem('cfl-nav');
+    }
+  }, [activeMenu]);
 
   return (
     <nav className="cfl-nav d-flex">
@@ -45,9 +55,9 @@ function NavBar() {
           <li
             key={item.id}
             className={`cfl-nav__list-item${
-              activeItem === item.id ? ' icon-marker' : ''
+              activeItem === item.path ? ' icon-marker' : ''
             }`}
-            onClick={() => handleItemClick(item.id)}
+            onClick={() => handleItemClick(item.path)}
           >
             <NavLink to={item.path}>{item.value}</NavLink>
           </li>
