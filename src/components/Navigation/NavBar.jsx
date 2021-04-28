@@ -11,25 +11,43 @@ const ITEMS = [
 ];
 
 // handle active item with location path value instead to get the correct value after reload
-function NavBar(props) {
+function NavBar() {
   const [activeItem, setActiveItem] = useState(null);
+  const [activeMenu, setActiveMenu] = useState(false);
+
+  const handleItemClick = (id) => {
+    if (activeMenu) {
+      setActiveMenu(false);
+    }
+
+    setActiveItem(id);
+    return;
+  };
 
   return (
     <nav className="cfl-nav d-flex">
-      <button class="cfl-nav__hamburger-icon" aria-label="Navigation">
+      <button
+        aria-label="Hamburger Menu"
+        onClick={() => setActiveMenu(!activeMenu)}
+        className={`cfl-nav__hamburger-icon${activeMenu ? ' active' : ''}`}
+      >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <ul className="cfl-nav__list flex-centered">
+      <ul
+        className={`cfl-nav__list flex-centered${
+          activeMenu ? ' mob-vertical' : ''
+        }`}
+      >
         {ITEMS.map((item) => (
           <li
             key={item.id}
             className={`cfl-nav__list-item${
               activeItem === item.id ? ' icon-marker' : ''
             }`}
-            onClick={() => setActiveItem(item.id)}
+            onClick={() => handleItemClick(item.id)}
           >
             <NavLink to={item.path}>{item.value}</NavLink>
           </li>
