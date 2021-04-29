@@ -1,0 +1,115 @@
+.cfl-nav {
+  width: 100%;
+  min-height: 60px;
+  color: $nav-color;
+  align-items: center;
+  background-color: $nav-bg-color;
+  justify-content: space-between;
+
+  &__hamburger-icon {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    background: 0 0;
+    cursor: pointer;
+    margin: 0 rem(20);
+    position: relative;
+    vertical-align: middle;
+    box-sizing: content-box;
+    border: 2px solid transparent;
+
+    span {
+      height: 2px;
+      width: 100%;
+      display: block;
+      position: absolute;
+      border-radius: 9px;
+      background: $white;
+      transition: 0.3s ease-in-out;
+    }
+
+    @for $i from 1 through 3 {
+      span:nth-child(#{$i}) {
+        top: calc((#{$i} * 6) * 1px);
+      }
+    }
+
+    &.active {
+      span {
+        top: auto;
+      }
+
+      span:first-child {
+        transform: rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        display: none;
+      }
+
+      span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      display: none;
+      margin-left: 0;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: none;
+
+    &-item {
+      margin: rem(20);
+      padding: rem(12) 0;
+      text-transform: uppercase;
+
+      &.icon-marker {
+        @include media-breakpoint-down(sm) {
+          border-bottom: 2px solid $white;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        margin: 0 rem(16);
+      }
+    }
+
+    &.mob-vertical {
+      top: 60px;
+      display: flex;
+      position: absolute;
+      align-items: stretch;
+      flex-direction: column;
+      background-color: inherit;
+
+      li {
+        width: fit-content;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    margin: 0 1.5rem;
+
+    @include media-breakpoint-up(md) {
+      order: -1;
+      margin: 0;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 0 rem(32);
+  }
+}
