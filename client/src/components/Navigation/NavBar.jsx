@@ -64,7 +64,7 @@ function NavBar() {
         ))}
       </ul>
 
-      <span className="cfl-nav__logo" onClick={() => setActiveItem(null)}>
+      <span className="cfl-nav__logo" onClick={() => handleItemClick('/')}>
         <NavLink exact to="/">
           <img
             width="50"

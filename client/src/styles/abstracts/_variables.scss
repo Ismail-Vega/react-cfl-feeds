@@ -42,6 +42,7 @@ $text-color: lighten(#000, 17.5%); //#2d2d2d
 $theme-color: $white;
 $html-font-size: 16px; //used
 $cfl-main-x-padding: 12px;
+$cfl-content-max-width: 1240px; //used
 
 // NAV
 $nav-color: $lighter-grey; // used
@@ -58,3 +59,18 @@ $section-odd-color: $text-color;
 
 $section-even-bg: #fff;
 $section-even-color: $text-color;
+
+//SPACING
+$space-base: rem(4);
+$space-1: rem(8);
+$space-2: rem(16);
+$space-3: rem(24);
+$space-4: rem(32);
+$space-5: rem(40);
+$space-6: rem(48);
+$space-7: rem(56);
+$space-8: rem(64);
+$space-9: rem(72);
+$space-10: rem(80);
+$space-11: rem(88);
+$space-12: rem(96);

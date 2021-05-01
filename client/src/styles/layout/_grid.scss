@@ -1,90 +1,111 @@
-main#content {
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: $cfl-main-x-padding;
-  padding-right: $cfl-main-x-padding;
-
-  @include media-breakpoint-up(xl) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.cfl-section--wide {
-  margin-left: -$cfl-main-x-padding;
-  margin-right: -$cfl-main-x-padding;
-
-  @include media-breakpoint-up(xl) {
-    margin-left: 0;
-    margin-right: 0;
-  }
+// Main container
+.cfl-wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns:
+    [viewport-start] 1fr
+    [content-start] minmax(0, $cfl-content-max-width)
+    [content-end] 1fr [viewport-end];
 }
 
 .cfl-grid {
   display: grid;
-  row-gap: 20px;
-  column-gap: 20px;
-  position: relative;
-  grid-template-columns: [content-start] repeat(12, 1fr) [content-end];
+  grid-column: content-start / content-end;
+  grid-template: 1fr / repeat(12, [col] minmax(0, $cfl-content-max-width / 12));
+  @include grid-gaps;
+}
 
-  &__item {
-    grid-column: content-start / content-end;
+.cfl-section {
+  grid-column: content-start / content-end;
+}
 
-    @include media-breakpoint-up(xl) {
-      grid-column: auto / auto;
-    }
-  }
-
-  @include media-breakpoint-up(xl) {
-    max-width: 1240px;
-    margin-left: auto;
-    margin-right: auto;
-    grid-column: content-start / content-end;
-
-    &--responsive {
-      grid-template-columns:
-        [content-start] repeat(auto-fill, minmax(300px, 1fr))
-        [content-end];
+.list-editorial {
+  @include media-breakpoint-up(md) {
+    .cfl-col__2,
+    .cfl-col__3,
+    .cfl-col__4,
+    .cfl-col__5 {
+      grid-column: span 6;
     }
   }
 }
 
-.cfl-grid--outer {
-  @include media-breakpoint-up(xl) {
-    display: grid;
-    grid-column: 1 / -1;
-    grid-template-columns:
-      [viewport-start] 1fr [content-start] minmax(0, 1240px)
-      [content-end] 1fr [viewport-end];
-  }
-
-  & & {
-    grid-column-gap: 0;
-  }
+[class*='cfl-col__'] {
+  grid-column: span 12;
 }
 
-.cfl-grid--editorial {
-  @include media-breakpoint-up(xl) {
-    grid-template-columns: [content-start] 7fr 5fr [content-end];
-  }
-}
-
-.cfl-content {
-  &--wide {
-    grid-column: content-start / content-end;
-  }
-
-  @include media-breakpoint-up(xl) {
-    &--wide_3_9 {
-      grid-column: 3 / 9;
+// Generic Col with default behavior in Breakpoint, use custom CSS to change behavior if needed
+@include media-breakpoint-up(md) {
+  .cfl-col__2,
+  .cfl-col__3,
+  .cfl-col__4,
+  .cfl-col__5 {
+    &.centered {
+      grid-column: 4 / -4;
     }
+  }
 
-    &--wide_2_10 {
-      grid-column: 2 / 10;
+  .cfl-col__6,
+  .cfl-col__7 {
+    &.centered {
+      grid-column: 3 / -3;
+    }
+  }
+
+  .cfl-col__8,
+  .cfl-col__9,
+  .cfl-col__10 {
+    &.centered {
+      grid-column: 2 / -2;
     }
   }
 }
 
-.cfl-viewport--wide {
-  grid-column: 1 / -1;
+@include media-breakpoint-up(lg) {
+  @for $col_index from 2 through 12 {
+    .cfl-col__#{$col_index},
+    .list-editorial .cfl-col__#{$col_index} {
+      grid-column: span $col_index;
+      &.centered {
+        $centered-span: floor((12 - $col_index) / 2 + 1);
+        grid-column: #{$centered-span} / -#{$centered-span};
+      }
+    }
+  }
+}
+
+.cfl-grid__2-10 {
+  grid-column: span 12;
+
+  @include media-breakpoint-up(lg) {
+    grid-column: 2 / 10;
+  }
+}
+
+.cfl-grid__3-9 {
+  grid-column: span 12;
+
+  @include media-breakpoint-up(lg) {
+    grid-column: 3 / 9;
+  }
+}
+
+.cfl-grid__3-11 {
+  grid-column: span 12;
+
+  @include media-breakpoint-up(lg) {
+    grid-column: 3 / 11;
+  }
+}
+
+.cfl-grid__3-13 {
+  grid-column: span 12;
+
+  @include media-breakpoint-up(lg) {
+    grid-column: 3 / 13;
+  }
+}
+
+.no-gap {
+  grid-gap: 0;
 }

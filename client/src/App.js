@@ -1,5 +1,5 @@
-import StoreProvider from './store/storeProvider';
 import AppRouter from './routers/AppRouter';
+import StoreProvider from './store/storeProvider';
 
 function App() {
   return (

@@ -1,6 +1,7 @@
 const initialStore = {};
 
 const types = {
+  setError: 'set-error',
   setGames: 'set-games',
   setTeams: 'set-teams',
   setPlayers: 'set-players',
@@ -10,6 +11,8 @@ const types = {
 
 export default function storeReducer(state, action) {
   switch (action.type) {
+    case types.setError:
+      return { ...state, error: action.payload };
     case types.setGames:
       return { ...state, games: action.payload };
     case types.setTeams:

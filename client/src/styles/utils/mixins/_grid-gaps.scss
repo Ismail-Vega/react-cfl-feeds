@@ -1,0 +1,13 @@
+@mixin grid-gaps($is-outer: false) {
+  grid-gap: 20px 10px;
+
+  @include media-breakpoint-up(md) {
+    grid-gap: 36px 20px;
+  }
+
+  @if $is-outer {
+    @include media-breakpoint-up(xxl) {
+      grid-column-gap: 0;
+    }
+  }
+}
