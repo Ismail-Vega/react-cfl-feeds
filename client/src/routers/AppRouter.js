@@ -26,7 +26,7 @@ import {
 function AppRouter() {
   const today = new Date();
   const dispatch = useDispatch();
-  const gamesQuery = `v1/games?filter[season][eq]=${today.getFullYear()}&page[size]=100`;
+  const gamesQuery = `/v1/games?filter[season][eq]=${today.getFullYear()}&page[size]=100`;
   const seasonGames2021 = useApiSearch({ query: gamesQuery });
   const { error, errorMsg, data } = seasonGames2021;
 

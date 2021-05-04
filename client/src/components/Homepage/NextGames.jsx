@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useStore } from '../../store/storeProvider';
 import { addDays, formatDate } from '../../helpers/helpers';
+import Spinner from '../Common/Spinner/Spinner';
+import FlippingCard from '../Common/Card/FlippingCard';
 
 export default function NextGames() {
   const { error, games } = useStore();
@@ -12,8 +14,11 @@ export default function NextGames() {
   }, [games, error, nextGames]);
 
   return (
-    <div className="cfl-section next-games">
-      <h2 className="next-games_title">Next Games</h2>
-    </div>
+    !error && (
+      <div className="cfl-section next-games">
+        <h2 className="next-games_title">Next Games</h2>
+        <FlippingCard />
+      </div>
+    )
   );
 }

@@ -21,9 +21,9 @@ export default function useApiSearch(props) {
     })
       .then((res) => {
         setData((prevData) => {
-          return [...prevData, ...res.data.data];
+          return res?.data ? [...prevData, ...res.data] : [];
         });
-        setHasMore(res.data.data.length > 0);
+        setHasMore(res.data.length > 0);
         setLoading(false);
       })
       .catch((e) => {
