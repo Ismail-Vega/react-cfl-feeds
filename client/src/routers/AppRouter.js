@@ -22,6 +22,7 @@ import {
   TeamsPage,
   SeasonsPage,
 } from '../pages';
+import Footer from '../components/Footer/Footer';
 
 function AppRouter() {
   const today = new Date();
@@ -58,6 +59,7 @@ function AppRouter() {
           <Redirect to="/404" />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

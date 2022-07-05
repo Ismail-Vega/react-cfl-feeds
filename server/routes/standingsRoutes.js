@@ -1,8 +1,8 @@
-const serverProxy = require('./serverProxy');
+const serverProxy = require('../serverProxy');
 
 module.exports = (app) => {
   app.get('/api/task/load/:name', async (req, res) => {
-    var taskName = req.params && req.params.name;
+    var taskName = req?.params && req.params.name;
 
     var query;
 

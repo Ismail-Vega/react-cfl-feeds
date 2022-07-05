@@ -1,0 +1,29 @@
+.cfl-social-container {
+  padding: 3rem 6rem;
+}
+
+.cfl-social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &-youtube {
+    color: $red;
+  }
+
+  &-facebook {
+    color: $blue-dark;
+  }
+
+  &-twitter {
+    color: $blue;
+  }
+
+  &-instagram {
+    color: $black;
+  }
+}

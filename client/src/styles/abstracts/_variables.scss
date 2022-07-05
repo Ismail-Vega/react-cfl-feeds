@@ -49,6 +49,10 @@ $nav-color: $lighter-grey; // used
 $nav-item-color: $lighter-grey;
 $nav-bg-color: lighten(#000, 17.5%); //used
 
+// FOOTER
+$footer-item-color: $lighter-grey;
+$footer-bg-color: lighten(#000, 21.5%); //used
+
 // BORDERS
 $border-gray: #adb5bd;
 $border-gray-dark: #868e96;
@@ -74,3 +78,9 @@ $space-9: rem(72);
 $space-10: rem(80);
 $space-11: rem(88);
 $space-12: rem(96);
+
+//CARDS
+$level-one: translateZ(1rem);
+$level-two: translateZ(2rem);
+$level-three: translateZ(3rem);
+$flipping-bg-color: $grey-100;

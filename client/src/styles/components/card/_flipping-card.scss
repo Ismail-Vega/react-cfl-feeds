@@ -1,85 +1,88 @@
-:root {
-  --level-one: translateZ(3rem);
-  --level-two: translateZ(6rem);
-  --level-three: translateZ(9rem);
-
-  --fw-normal: 400;
-  --fw-bold: 700;
-
-  --clr: #b7c9e5;
-}
-
-.cfl-card {
-  width: 300px;
+.flipping-card {
   overflow: hidden;
-}
 
-.cfl-card__content {
-  padding: 10em 3em;
-  text-align: center;
-  position: relative;
-  transition: transform 3s;
-  transform-style: preserve-3d;
-}
+  &__content {
+    padding: 10em 3em;
+    text-align: center;
+    position: relative;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+  }
 
-.cfl-card:hover .cfl-card__content {
-  transform: rotateY(0.5turn);
-}
+  &:hover .flipping-card__content {
+    transform: rotateY(0.5turn);
+  }
 
-.cfl-card__front,
-.cfl-card__back {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: grid;
-  padding: 1em 1em;
-  border-radius: 4px;
-  position: absolute;
-  align-content: center;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
+  &__front,
+  &__back {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    padding: 1em 1em;
+    border-radius: 4px;
+    position: absolute;
+    align-content: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
 
-.cfl-card__front {
-  color: #333;
-  background-size: cover;
-  background-color: var(--clr);
-  background-blend-mode: overlay;
-}
+  &__front {
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: $flipping-bg-color;
+  }
 
-.cfl-card__front::before {
-  content: '';
-  --spacer: 1em;
-  position: absolute;
-  top: var(--spacer);
-  left: var(--spacer);
-  right: var(--spacer);
-  bottom: var(--spacer);
-  transform: var(--level-one);
-  border: 3px solid currentColor;
-}
+  &__front::before {
+    content: '';
+    --spacer: 1em;
+    position: absolute;
+    top: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    bottom: var(--spacer);
+    transform: $level-one;
+    border: 3px solid $dark-grey;
+  }
 
-.cfl-card__title {
-  text-transform: uppercase;
-  transform: var(--level-three);
-}
+  &__title {
+    transform: $level-three;
+    text-transform: uppercase;
+  }
 
-.cfl-card__subtitle {
-  opacity: 0.7;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  transform: var(--level-two);
-  font-weight: var(--fw-bold);
-}
+  &__date {
+    right: rem(30);
+    bottom: rem(20);
+    padding: rem(10);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba($dark-grey, 0.8);
+    text-shadow: 1px 1px rgba($black, 0.7);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 
-.cfl-card__body {
-  transform: var(--level-two);
-  font-weight: var(fw-normal);
-}
+    span {
+      color: $white;
+    }
+  }
 
-.cfl-card__back {
-  color: var(--clr);
-  background: #333;
-  transform: rotateY(0.5turn);
+  &__subtitle {
+    opacity: 0.7;
+    letter-spacing: 4px;
+    transform: $level-two;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    transform: $level-two;
+  }
+
+  &__back {
+    background: $dark-grey;
+    color: $flipping-bg-color;
+    transform: rotateY(0.5turn);
+  }
 }

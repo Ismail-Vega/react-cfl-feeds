@@ -1,0 +1,17 @@
+.cfl-footer {
+  padding: 1.25rem 1rem;
+  color: $footer-item-color;
+  background-color: $footer-bg-color;
+
+  &-header {
+    p {
+      line-height: 1.625;
+      margin-top: 0.5rem;
+      font-size: 15px;
+    }
+  }
+
+  &-list {
+    margin-top: 2rem;
+  }
+}
