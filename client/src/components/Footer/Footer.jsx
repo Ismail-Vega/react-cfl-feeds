@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="cfl-footer">
       <div className="cfl-footer-header">
         <span className="cfl-nav__logo">
-          <NavLink exact to="/">
+          <NavLink to="/">
             <img
               width="50"
               height="50"

@@ -11,7 +11,10 @@
 .cfl-grid {
   display: grid;
   grid-column: content-start / content-end;
-  grid-template: 1fr / repeat(12, [col] minmax(0, $cfl-content-max-width / 12));
+  grid-template: 1fr / repeat(
+      12,
+      [col] minmax(0, calc($cfl-content-max-width / 12))
+    );
   @include grid-gaps;
 }
 
@@ -67,7 +70,7 @@
     .list-editorial .cfl-col__#{$col_index} {
       grid-column: span $col_index;
       &.centered {
-        $centered-span: floor((12 - $col_index) / 2 + 1);
+        $centered-span: floor(calc((12 - $col_index) / 2 + 1));
         grid-column: #{$centered-span} / -#{$centered-span};
       }
     }

@@ -21,13 +21,13 @@
   },
   "homepage": "https://github.com/Ismail-Vega/react-cfl-feeds#readme",
   "dependencies": {
-    "axios": "^0.21.1",
-    "concurrently": "^6.0.2",
+    "axios": "^0.27.2",
+    "concurrently": "^7.2.2",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.0.1",
     "express": "^4.17.1",
-    "http-proxy-middleware": "^1.3.1",
-    "node-sass": "^5.0.0",
+    "http-proxy-middleware": "^2.0.6",
     "nodemon": "^2.0.7"
-  }
+  },
+  "devDependencies": {}
 }

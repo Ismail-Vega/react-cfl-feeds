@@ -6,9 +6,9 @@ import useApiSearch from '../helpers/apiHooks/useApiSearch';
 
 import {
   BrowserRouter as Router,
-  Redirect,
+  Navigate,
   Route,
-  Switch,
+  Routes,
 } from 'react-router-dom';
 
 import {
@@ -43,22 +43,20 @@ function AppRouter() {
   return (
     <Router>
       <Navbar />
-      <Switch>
-        <Route exact path="/games" component={GamesPage} />
-        <Route exact path="/teams" component={TeamsPage} />
-        <Route exact path="/players" component={PlayersPage} />
-        <Route exact path="/seasons" component={SeasonsPage} />
-        <Route exact path="/standings" component={StandingsPage} />
+      <Routes>
+        <Route path='/games' element={<GamesPage />} />
+        <Route path='/teams' element={<TeamsPage />} />
+        <Route path='/players' element={<PlayersPage />} />
+        <Route path='/seasons' element={<SeasonsPage />} />
+        <Route path='/standings' element={<StandingsPage />} />
 
-        <Route exact path="/about" component={AboutPage} />
-        <Route exact path="/contact" component={ContactPage} />
-        <Route exact path="/" component={HomePage} />
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='/contact' element={<ContactPage />} />
+        <Route path='/' element={<HomePage />} />
 
-        <Route path="/404" component={NotFoundPage} />
-        <Route path="*">
-          <Redirect to="/404" />
-        </Route>
-      </Switch>
+        <Route path='/404' element={<NotFoundPage />} />
+        <Route path='*' render={() => <Navigate to='/404' />} />
+      </Routes>
       <Footer />
     </Router>
   );
